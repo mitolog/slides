@@ -1,0 +1,33 @@
+{
+  "name": "figma-to-swiftui-presentation",
+  "version": "1.0.0",
+  "config": {
+    "name": "slides/figma-to-swiftui"
+  },
+  "scripts": {
+    "create": "node scripts/init.js $npm_package_config_name",
+    "start": "fusuma start -d $npm_package_config_name",
+    "build": "fusuma build -d $npm_package_config_name",
+    "deploy": "npm run build && node scripts/deploy.js $npm_package_config_name",
+    "fmt": "prettier --write **/*.{js,json,css,md}",
+    "precommit": "pretty-quick --staged"
+  },
+  "author": "mitolog",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mitolog/slides.git"
+  },
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "gh-pages": "^2.0.1",
+    "husky": "^3.0.0",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.9.0",
+    "fs-extra": "^8.1.0",
+    "fusuma": "^1.12.0"
+  }
+}
